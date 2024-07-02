@@ -1,0 +1,82 @@
+.Mesages{
+    background-image: url(../../images/chatBacground.png);
+    background-size: cover;
+    background-position: center;
+    width: 70%;
+    height: 100%;
+}
+
+.mesageInf{
+    background-color: #202020;
+    width: 100%;
+    height: 5%;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+.mesageInf > img{
+    width: 50px;
+    height: 50px;
+}
+.mesageInf > h1{
+    color: white;
+    margin-left: 5px;
+}
+
+.mAry{
+    width: 100%;
+    height: 89%;
+}
+.sendM{
+    width: 100%;
+    height: 6%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.SendMesageBarr{
+    background-color: #151515;
+    width: 420px;
+    height: 50px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px #151515;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 10px;
+}
+.SendMesageBarr > input{
+    background-color: transparent;
+    color: white;
+    font-size: 20px;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.SendMesageBarr > input:focus{
+    outline: none;
+}
+
+.sendM > button{
+    background-color: #151515;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    border: none;
+    margin-left: 10px;
+    box-shadow: 0px 0px 10px #151515;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.sendM > button:active{
+    background-color: #000000;
+}
+.sendM > button > img{
+   width: 60%;
+   height: 60%;
+    margin-left: 5px;
+    margin-bottom: 5px;
+   transform: rotate(-50deg)
+}

@@ -1,0 +1,27 @@
+.User{
+    background-color: transparent;
+    width: 95%;
+    height: 80px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px;
+}
+.User > img{
+    width: 50px;
+    height: 50px;
+}
+
+.User:hover{
+    background-color: #101010;
+}
+.userInfo{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 10px;
+    color: white;
+}
