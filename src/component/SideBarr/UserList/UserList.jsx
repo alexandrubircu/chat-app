@@ -1,14 +1,14 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styles from './styles.module.css';
 import User from './User/User';
 
-let users = [
-    {id:1 , name:"Alex" , surname:"Bircu"}
-]
 
-const UserList = () => {
+const UserList = (props) => {
 
-    let userElement = users.map(i => <User name={i.name} surname={i.surname} key={i.id}/>);
+
+
+   
+    let userElement = props.userD.map(i => <User id={i.id} setUserId={props.setUserId} name={i.name} surname={i.surname} key={i.id}/>);
     
     return(
         <div className={styles.UserList}>
