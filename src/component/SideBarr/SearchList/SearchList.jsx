@@ -14,7 +14,7 @@ const SearchList = () => {
             </div>
 
             <div className={styles.sBarr}>
-                <img src={SearchImg}/>
+                <img src={SearchImg} alt=''/>
                 <input></input>
             </div>
         </div>

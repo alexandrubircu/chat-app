@@ -1,0 +1,34 @@
+{
+  "user": [
+    {
+      "id": "1",
+      "name": "User1",
+      "surname": "Surname1"
+    },
+    {
+      "id": "2",
+      "name": "User2",
+      "surname": "Surname2"
+    }
+  ],
+  "dialogs": [
+    {
+      "id": "1",
+      "userId": 1,
+      "messages": [
+        {
+          "id": 1720143367937,
+          "userId": 1,
+          "mesage": "Buna!",
+          "time": "04:36 AM"
+        },
+        {
+          "id": 1720143383433,
+          "userId": 0,
+          "mesage": "Buna!",
+          "time": "04:36 AM"
+        }
+      ]
+    }
+  ]
+}

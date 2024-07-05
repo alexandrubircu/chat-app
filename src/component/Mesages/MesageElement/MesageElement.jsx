@@ -6,7 +6,7 @@ const MesageElement = (props) => {
     const [meMesage , setmeMesage] = useState([])
 
     useEffect(()=>{
-        if(props.userId == 0){
+        if(props.userId === 0){
             setmeMesage({justi:"end" , borderR:"0px" , borderL:"10px" , backColor:"#000"})
         }
     },[props.userId])
