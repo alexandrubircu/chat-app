@@ -1,0 +1,31 @@
+.NewConversation{
+    width: 100%;
+    height: 89vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.animatedimage {
+    width: 200px;
+    height: 200px;
+    transition: transform 0.5s ease-in-out; /* Asigură o tranziție lină la hover */
+  }
+  
+  @keyframes moveSideToSide {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(-40px); }
+    100% { transform: translateX(30px); }
+  }
+  
+  .animatedimage:hover {
+    animation: moveSideToSide 1s infinite alternate;
+  }
+
+
+.NewConversation > h1{
+    color: white;
+}
+

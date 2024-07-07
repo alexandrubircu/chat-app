@@ -4,6 +4,7 @@ import sendImg from '../../images/send-icon-512x498-x3rvtgx0.png';
 import userImg from '../../images/userImg.png';
 import { api } from "../../api/api";
 import MesageElement from "./MesageElement/MesageElement";
+import NewConversation from '../NewConversation/NewConversation'
 
 const Mesages = (props) => {
     const [mData, mdataSet] = useState(null);
@@ -29,7 +30,7 @@ const Mesages = (props) => {
     }, [messages]);
 
     const handleSendMessage = () => {
-        if (!inputtext.trim()) return; 
+        if (!inputtext.trim()) return;  
 
         const newMessage = {
             id: Date.now(), 
@@ -64,7 +65,7 @@ const Mesages = (props) => {
                     [...(messages || [])].reverse().map((i) => (
                         <MesageElement mesage={i.mesage} time={i.time} userId={i.userId} key={i.id} />
                     )) : 
-                    <div>empty</div>
+                    <div><NewConversation/></div>
                 }
             </div> 
             <div className={styles.sendM}>
