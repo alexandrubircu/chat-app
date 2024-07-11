@@ -1,32 +1,75 @@
 {
-  "user": [
+  "users": [
     {
-      "id": "1",
+      "id": 1,
       "name": "User1",
-      "surname": "Surname1"
+      "surname": "Surname1",
+      "login": "user1",
+      "password": "1233214"
     },
     {
-      "id": "2",
+      "id": 2,
       "name": "User2",
-      "surname": "Surname2"
+      "surname": "Surname2",
+      "login": "user2",
+      "password": "1233214"
+    },
+    {
+      "id": 3,
+      "name": "User3",
+      "surname": "Surname3",
+      "login": "user3",
+      "password": "1233214"
+    },
+    {
+      "id": 4,
+      "name": "User4",
+      "surname": "Surname4",
+      "login": "user4",
+      "password": "1233214"
+    },
+    {
+      "id": 5,
+      "name": "User5",
+      "surname": "Surname5",
+      "login": "user5",
+      "password": "1233214"
     }
   ],
   "dialogs": [
     {
-      "id": "1",
-      "userId": 1,
+      "id": 1,
+      "participants": [1, 2],
       "messages": [
         {
-          "id": 1720143367937,
+          "id": 1,
           "userId": 1,
-          "mesage": "Buna!",
-          "time": "04:36 AM"
+          "message": "Buna!",
+          "time": "10:42"
         },
         {
-          "id": 1720143383433,
-          "userId": 0,
-          "mesage": "Buna!",
-          "time": "04:36 AM"
+          "id": 2,
+          "userId": 2,
+          "message": "Salut!",
+          "time": "10:43"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "participants": [4, 5],
+      "messages": [
+        {
+          "id": 1,
+          "userId": 2,
+          "message": "Salut User3!",
+          "time": "12:23"
+        },
+        {
+          "id": 2,
+          "userId": 3,
+          "message": "Salut User1!",
+          "time": "12:24"
         }
       ]
     }

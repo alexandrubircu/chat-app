@@ -7,7 +7,8 @@ const SideBarr = (props) => {
     return(
         <div className={styles.SideBarr}>
             <SearchList/>
-            <UserList userD={props.userD} setUserId={props.setUserId}/>
+            <UserList users={props.users}/>
+            {/* <UserList userD={props.userD} setUserId={props.setUserId}/> */}
         </div>
     );
 }

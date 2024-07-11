@@ -1,0 +1,99 @@
+.Login{
+    background-color: #202020;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.loginblock{
+    width: 350px;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    margin-top: -15%;
+}
+.loginblock > h1{
+    font-size: 60px;
+    color: white;
+    margin-bottom: 5px;
+}
+.loginblock > input{
+    background-color: #151515;
+    color: white;
+    font-size: 22px;
+    width: 100%;
+    height: 65px;
+    border-radius: 15px;
+    border: none;
+    box-shadow: 0px 0px 10px #151515;
+    padding: 0px 6px;
+    margin: 4px;
+}
+
+.loginblock > input:focus{
+    outline: none;
+}
+
+
+.buttonblock{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    align-items: center;
+
+}
+.buttonblock > button{
+    background-color: #151515;
+    color: white;
+    font-size: 25px;
+    width: fit-content;
+    height: fit-content;
+    padding: 15px 30px;
+    border-radius: 10px;
+    border: none;
+    margin-top: 5px;
+}
+.buttonblock > button:active{
+    background-color: #000000;
+}
+
+
+.actionblock{
+    width: 100%;
+    padding: 0px 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.actionblock > a{
+    font-size: 20px;
+    text-decoration: none;
+    color: #000000;
+}
+
+.actionblock > a:active{
+    color: #151515;
+}
+.checkbox{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.checkbox > input{
+    margin: 2px;
+    width: 20px;
+    height: 20px;
+}
+.checkbox > p {
+    margin-left: 5px;
+    font-size: 20px;
+    color: white;
+}
