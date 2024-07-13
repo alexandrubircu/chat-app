@@ -3,8 +3,8 @@ import styles from './styles.module.css';
 import { Link } from "react-router-dom";
 
 const Login = (props) => {
-    const [login, setLogin] = useState('');
-    const [password, setPassword] = useState('');
+    const [login, setLogin] = useState('user1');
+    const [password, setPassword] = useState('1233214');
 
     const handleSignIn = () => {
         props.handleLogin(login, password); 

@@ -49,8 +49,9 @@ function App() {
         console.error('Error fetching dialogs:', error);
       });
   };
+  
 
-  // console.log(users)
+  
   
   return (
     <div className="App">
