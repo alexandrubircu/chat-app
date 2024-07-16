@@ -5,7 +5,7 @@ import userImg from '../../../../images/userImg.png'
 const User = (props) => {
     
     return(
-        <div className={styles.User} onClick={()=>props.handleClick(props.user)} >
+        <div className={styles.User} onClick={()=>props.selectUser(props.user)} >
             <img src={userImg} alt=''/>
             <div className={styles.userInfo}>
                 <h2>{props.user.name}</h2>

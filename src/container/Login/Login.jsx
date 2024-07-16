@@ -6,10 +6,12 @@ const Login = (props) => {
     const [login, setLogin] = useState('user1');
     const [password, setPassword] = useState('1233214');
 
-    const handleSignIn = () => {
-        props.handleLogin(login, password); 
-    };
+    const handleSignIn = () =>{
+        const foundUser = props.userData.find( user => user.login === login && user.password === password);
+        props.setAuthUser(foundUser);
+    }
 
+    
     return (
         <div className={styles.Login}>
             <div className={styles.loginblock}>

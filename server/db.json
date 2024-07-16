@@ -42,15 +42,21 @@
       "participants": [1, 2],
       "messages": [
         {
+          "id": 3,
+          "userId": 1,
+          "message": "user1 ultemul mesaj",
+          "time": "10:43"
+        },
+        {
           "id": 1,
           "userId": 1,
-          "message": "Buna!1",
+          "message": "user1",
           "time": "10:42"
         },
         {
           "id": 2,
           "userId": 2,
-          "message": "Salut!",
+          "message": "user2",
           "time": "10:43"
         }
       ]

@@ -9,7 +9,7 @@ const UserList = (props) => {
             <User 
                 user={i}
                 key={i.id}
-                handleClick={props.handleClick}
+                selectUser={props.selectUser}
             />
         );
     })

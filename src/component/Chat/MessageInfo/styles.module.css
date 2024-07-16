@@ -1,0 +1,17 @@
+.messageInfo{
+    background-color: #202020;
+    width: 100%;
+    height: 5%;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+.messageInfo > img{
+    width: 50px;
+    height: 50px;
+}
+.messageInfo > h1{
+    color: white;
+    margin-left: 5px;
+    font-size: 26px;
+}

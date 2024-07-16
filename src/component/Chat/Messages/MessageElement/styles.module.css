@@ -1,10 +1,10 @@
-.MesageElementBlock{
+ .MessageElementBlock {
     width: 100%;
     height: fit-content;
     display: flex;
-
 }
-.MesageElement{
+
+.MessageElement {
     background-color: #202020;
     width: fit-content;
     max-width: 430px;
@@ -17,16 +17,13 @@
     justify-content: center;
     overflow-wrap: anywhere; 
     border-bottom-left-radius: 0;
-    
 }
 
-
-.MesageElement > p {
+.MessageElement > p {
     font-size: 15px;
     color: white;
     font-weight: 500;
 }
-
 
 .Mtime {
     width: 100%;
@@ -39,5 +36,14 @@
 .Mtime > p {
     font-size: 15px;
     color: gray;
-}    
+}
 
+.AuthUserMessage {
+    justify-content: flex-end; 
+}
+
+.AuthUserMessage .MessageElement {
+    border-radius: 10px;
+    border-bottom-right-radius: 0px;
+    background-color: #003772; 
+}
