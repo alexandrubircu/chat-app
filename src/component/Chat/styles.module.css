@@ -1,7 +1,5 @@
 .Messages{
-    background-image: url(../../images/chatBacground.png);
-    background-size: cover;
-    background-position: center;
+    background-color: black;
     width: 70%;
     min-width: 450px;
     height: 100%;

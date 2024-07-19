@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import styles from './styles.module.css'
 import SideBarr from "../../component/SideBarr/SideBarr";
 import Chat from "../../component/Chat/Chat";
-
+import ClearChat from  './ClearChat/ClearChat'
 
 
 const ChatPage = (props) => {
@@ -11,7 +11,12 @@ const ChatPage = (props) => {
     return (
         <div className={styles.ChatPage}>
             <SideBarr authUser={props.authUser} userData={props.userData} setSelectedUser={setSelectedUser}/>
-            <Chat selectedUser={selectedUser} authUser={props.authUser} authUserDialogs={props.authUserDialogs} sendNewMessage={props.sendNewMessage}/>
+
+            {
+                Object.keys(selectedUser).length === 0 ? <ClearChat/> :
+                <Chat selectedUser={selectedUser} authUser={props.authUser} authUserDialogs={props.authUserDialogs} sendNewMessage={props.sendNewMessage}/>
+            }
+            
         </div>
     );
 }

@@ -1,0 +1,32 @@
+.Messages{
+    background-color: black;
+    width: 70%;
+    min-width: 450px;
+    height: 100%;
+}
+
+.HiMseageBox{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    padding-top: 100px;
+}
+.HiMseage{
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+}
+.HiMseage > img{
+    width: 200px;
+    height: 300px;
+}
+.HiMseage > h1{
+    color: white;
+    font-size: 100px;
+    font-weight: 600;
+    margin-bottom: 40px;
+}
