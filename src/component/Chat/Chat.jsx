@@ -5,22 +5,33 @@ import Messages from './Messages/Messages'
 import SendMessages from './SendMessages/SendMessages'
 
 const Chat = (props) => {
-    const [selectedDialog, setSelectedDialog] = useState(null);
-
+    const [dialogId,setDialogId] = useState(null);
+    const [selectedDialogMessages,setSelectedDialogMessages] = useState(null);
+    
+    const [updateDialogMessages,setupdateDialogMessages] = useState(null);
+    
     useEffect(() => {
-        if (props.authUserDialogs) {
+        if (props.authUserDialogs && props.selectedUser && props.selectedUser.id) {
             const dialog = props.authUserDialogs.filter(dialog => 
                 dialog.participants.includes(+props.selectedUser.id)
             );
-            setSelectedDialog(dialog);
+            setDialogId(dialog[0].id)
+            setSelectedDialogMessages(dialog[0].messages)
         }
-    }, [props.selectedUser, props.authUserDialogs]);
+    }, [props.selectedUser,props.authUserDialogs]);
+    
+    useEffect(()=>{
+        if(updateDialogMessages){
+            setSelectedDialogMessages(updateDialogMessages);
+            props.sendNewMessage(dialogId,updateDialogMessages);
+        }     
+    },[updateDialogMessages])    
 
     return(
         <div className={styles.Messages}>
             <MessageInfo name={props.selectedUser.name}/>   
-            <Messages selectedDialog={selectedDialog} authUser={props.authUser} />
-            <SendMessages/>         
+            <Messages selectedDialogMessages={selectedDialogMessages} authUser={props.authUser} />
+            <SendMessages selectedDialogMessages={selectedDialogMessages} setupdateDialogMessages={setupdateDialogMessages}  authUser={props.authUser}/>         
         </div>
     );
 }

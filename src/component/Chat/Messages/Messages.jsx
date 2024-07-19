@@ -4,17 +4,14 @@ import MessageElement from "./MessageElement/MessageElement";
 
 const Messages = (props) => {
     
-    if (!props.selectedDialog || props.selectedDialog.length === 0) {
+    if (!props.selectedDialogMessages || props.selectedDialogMessages.length === 0) {
         return <div className={styles.messageArray}>No messages available.</div>;
     }
-
-    if (!props.selectedDialog[0].messages) {
-        return <div className={styles.messageArray}>No messages available.</div>;
-    }
+    
 
     return (
         <div className={styles.messageArray}>
-            {props.selectedDialog[0].messages.map(m => (
+            {props.selectedDialogMessages.map(m => (
                 <MessageElement
                     authUser={props.authUser}
                     id={m.id}

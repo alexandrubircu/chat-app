@@ -26,19 +26,3 @@ const SideBarr = (props) => {
 
 export default SideBarr;
 
-
-
-
-
-// const SideBarr = (props) => {
-
-
-//     return(
-//         <div className={styles.SideBarr}>
-//             <SearchList/>
-//             <UserList users={props.users} handleClick={props.handleClick}/>
-//         </div>
-//     );
-// }
-
-// export default SideBarr;
