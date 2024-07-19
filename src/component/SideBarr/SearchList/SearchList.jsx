@@ -4,12 +4,12 @@ import SearchImg from '../../../images/Search.svg.png'
 import menuB from '../../../images/menuB.png'
 
 
-const SearchList = () => {
+const SearchList = (props) => {
 
     return(
         <div className={styles.SearchList}>
 
-            <div className={styles.Mbutton}>
+            <div className={styles.Mbutton} onClick={props.onChangeComponent} >
                 <img src={menuB} alt=''/>
             </div>
 
