@@ -7,7 +7,7 @@ const ClearChat = () => {
         <div className={styles.Messages}>
                <div className={styles.HiMseageBox}>
                     <div className={styles.HiMseage}>
-                        <img src={HiImg}/>
+                        <img src={HiImg} alt=''/>
                         <h1>Hi</h1>
                     </div>
                 </div>
