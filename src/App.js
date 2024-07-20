@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
 import './App.css';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Navigate, Route, Routes, useNavigate } from 'react-router-dom';
 import { api } from './api/api';
 import ChatPage from './container/ChatPage/ChatPage';
 import Login from './container/Login/Login';
+import Register from "./container/Register/Register";
 
 function App() {
   const [counter, setCounter] = useState(0);
@@ -76,6 +77,16 @@ function App() {
     }
   }
 
+  const registerUser = async (user) => {
+    try {
+      const res = await api.post('/users', user);
+      setUserData(prevUsers => [...prevUsers, res.data]);
+
+    } catch (error) {
+      console.error("Eroare la înregistrarea utilizatorului:", error);
+    }
+    setAuthUser(user);
+  }
 
   return (
     <div className="App">
@@ -94,6 +105,7 @@ function App() {
               setAuthUser={setAuthUser} 
             />} 
           />
+          <Route path="/register" element={<Register registerUser={registerUser} userData={userData}/>} />
         </Routes>
       </BrowserRouter>
     </div>

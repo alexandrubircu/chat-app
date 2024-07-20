@@ -1,0 +1,96 @@
+.Register{
+    background-color: #202020;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.infoBlock{
+    width: 280px;
+    height: 450px;
+    margin-top: -15%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    padding: 5px;
+}
+.infoBlock > p{
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    margin: 5px;
+}
+
+.custom-button {
+    display: inline-block;
+    padding: 10px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.custom-button img {
+    width: 150px; 
+    height: 150px;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.custom-button:active img {
+    transform: scale(0.9);
+    opacity: 0.7; 
+}
+  
+  
+
+.Registerblock{
+    width: 380px;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    margin-top: -15%;
+}
+.Registerblock > h1{
+    font-size: 60px;
+    color: white;
+    margin-bottom: 20px;
+}
+.Registerblock > input{
+    background-color: #151515;
+    color: white;
+    font-size: 22px;
+    width: 100%;
+    height: 65px;
+    border-radius: 15px;
+    border: none;
+    box-shadow: 0px 0px 10px #151515;
+    padding: 0px 6px;
+    margin: 4px;
+}
+
+.Registerblock > input:focus{
+    outline: none;
+}
+
+
+.Registerblock > button{
+    background-color: #151515;
+    color: white;
+    font-size: 25px;
+    width: fit-content;
+    height: fit-content;
+    padding: 15px 30px;
+    border-radius: 10px;
+    border: none;
+    margin-top: 10px;
+}
+.Registerblock > button:active{
+    background-color: #000000;
+}

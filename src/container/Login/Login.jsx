@@ -34,7 +34,7 @@ const Login = (props) => {
                 />
                 <div className={styles.buttonblock}>
                     <div className={styles.actionblock}>
-                        <Link>Registration</Link>
+                        <Link to="/register">Registration</Link>
                         <div className={styles.checkbox}>
                             <input type="checkbox"/>
                             <p>Remember me</p>
