@@ -44,7 +44,13 @@ const Chat = (props) => {
             {
                 emptyChat ? <></> : !chatState ? <NewConversation/>: <Messages selectedDialogMessages={selectedDialogMessages} authUser={props.authUser} />
             }
-            <SendMessages selectedDialogMessages={selectedDialogMessages} setupdateDialogMessages={setupdateDialogMessages}  authUser={props.authUser}/>         
+            <SendMessages 
+                selectedDialogMessages={selectedDialogMessages} 
+                setupdateDialogMessages={setupdateDialogMessages}  
+                authUser={props.authUser}
+                selectedUser={props.selectedUser}
+                createNewConversation={props.createNewConversation}
+            />         
             
         </div>
     );

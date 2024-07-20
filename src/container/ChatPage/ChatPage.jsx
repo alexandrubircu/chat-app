@@ -14,7 +14,14 @@ const ChatPage = (props) => {
 
             {
                 Object.keys(selectedUser).length === 0 ? <ClearChat/> :
-                <Chat selectedUser={selectedUser} authUser={props.authUser} authUserDialogs={props.authUserDialogs} sendNewMessage={props.sendNewMessage}/>
+                <Chat 
+                    selectedUser={selectedUser} 
+                    authUser={props.authUser} 
+                    authUserDialogs={props.authUserDialogs} 
+                    sendNewMessage={props.sendNewMessage}
+                    createNewConversation={props.createNewConversation}
+                />
+                
             }
             
         </div>

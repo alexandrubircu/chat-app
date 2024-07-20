@@ -30,20 +30,6 @@ function App() {
     }
   }
 
-  const sendNewMessage = async (id, newMessages) => {
-    const dialog = dialogsData.find(dialog => dialog.id === id);
-
-    if (dialog) {
-      dialog.messages = newMessages;
-      try {
-        const res = await api.put(`/dialogs/${id}`, dialog);
-        setDialogsData(prevDialogs => prevDialogs.map(d => d.id === id ? res.data : d));
-      } catch (error) {
-        console.error("Eroare la actualizarea dialogului:", error);
-      }
-    }
-  }
-
   useEffect(() => {
     fetchUsers();
     fetchDialogs();
@@ -64,6 +50,33 @@ function App() {
     }
   }, [authUser, dialogsData]);
 
+  const sendNewMessage = async (id, newMessages) => {
+    const dialog = dialogsData.find(dialog => dialog.id === id);
+
+    if (dialog) {
+      dialog.messages = newMessages;
+      try {
+        const res = await api.put(`/dialogs/${id}`, dialog);
+        setDialogsData(prevDialogs => prevDialogs.map(d => d.id === id ? res.data : d));
+      } catch (error) {
+        console.error("Eroare la actualizarea dialogului:", error);
+      }
+    }
+  }
+
+  const createNewConversation = async (dialog) => {
+    const lastDialogId = dialogsData.length > 0 ? dialogsData[dialogsData.length - 1].id : 0;
+    dialog.id = +lastDialogId + 1;
+
+    try {
+      const res = await api.post('/dialogs', dialog);
+      setDialogsData(prevDialogs => [...prevDialogs, res.data]);
+    } catch (error) {
+      console.error("Eroare la crearea unui nou dialog:", error);
+    }
+  }
+
+
   return (
     <div className="App">
       <BrowserRouter>
@@ -74,6 +87,7 @@ function App() {
               authUserDialogs={authUserDialogs} 
               userData={userData} 
               sendNewMessage={sendNewMessage} 
+              createNewConversation={createNewConversation}
             /> :
             <Login 
               userData={userData} 
