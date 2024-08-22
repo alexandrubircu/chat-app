@@ -5,14 +5,16 @@ import UserList from "./UserList/UserList";
 import Menu from "./Menu/Menu";
 
 const SideBarr = (props) => {
-    const [users, setUsers] = useState([]);
+    const [usersDb, setUsersDb] = useState([]);
+    const [usersList , setUsersList] = useState([])
     const [activeComponent, setActiveComponent] = useState('UserList');
 
     useEffect(() => {
         const filteredUsers = props.userData.filter(user => user.id !== props.authUser.id);        
-        setUsers(filteredUsers);
+        setUsersDb(filteredUsers);
     }, [props.userData, props.authUser.id]);
 
+    
     const selectUser = (user) => {
         props.setSelectedUser(user);
     }
@@ -25,11 +27,12 @@ const SideBarr = (props) => {
         }
     }
     
+    
     return (
         <div className={styles.SideBarr}>
-            <SearchList onChangeComponent={onChangeComponent} />
+            <SearchList onChangeComponent={onChangeComponent} usersDb={usersDb} setUsersList={setUsersList} selectUser={selectUser}/>
             {activeComponent === 'UserList' ? 
-                <UserList users={users} selectUser={selectUser} /> : 
+                <UserList usersList={usersList} selectUser={selectUser}/> : 
                 <Menu authUser={props.authUser}/>
             }
         </div>

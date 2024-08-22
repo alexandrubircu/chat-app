@@ -6,12 +6,12 @@ const Menu = (props) => {
     return(
         <div className={styles.Menu}>
             <div className={styles.userInfo}>
-                <img src={userImg}/>
+                <img src={userImg} alt='user'/>
                 <h1>{props.authUser.name}</h1>
             </div>
-            <div className={styles.settings}>
+            {/* <div className={styles.settings}>
                 <p>setari</p>
-            </div>
+            </div> */}
         </div>
     );
 }

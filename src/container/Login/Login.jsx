@@ -35,10 +35,10 @@ const Login = (props) => {
                 <div className={styles.buttonblock}>
                     <div className={styles.actionblock}>
                         <Link to="/register">Registration</Link>
-                        <div className={styles.checkbox}>
+                        {/* <div className={styles.checkbox}>
                             <input type="checkbox"/>
                             <p>Remember me</p>
-                        </div>
+                        </div> */}
                     </div>
                     <button disabled={!login || !password} onClick={handleSignIn}>Sign in</button>
                 </div>

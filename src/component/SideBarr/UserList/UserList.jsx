@@ -4,7 +4,9 @@ import User from './User/User';
 
 const UserList = (props) => {
 
-    let userElement = props.users.map( i => {
+   
+
+    let userElement = props.usersList.map( i => {
         return(
             <User 
                 user={i}

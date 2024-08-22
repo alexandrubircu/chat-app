@@ -5,7 +5,7 @@ const MessageElement = (props) => {
     const [authUserMessage, setAuthUserMessage] = useState(false);
 
     useEffect(() => {
-        if (props.userId == +props.authUser.id) {
+        if (props.userId === +props.authUser.id) {
             setAuthUserMessage(true);
         } else {
             setAuthUserMessage(false);
